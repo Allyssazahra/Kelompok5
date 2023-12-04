@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Teh Solo</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-image: url('Ice Tea.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        form {
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 400px;
+            width: 100%;
+            text-align: center;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 10px;
+            text-align: left;
+        }
+
+        input {
+            width: calc(100% - 16px);
+            padding: 8px;
+            margin-bottom: 15px;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #f48f13;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #f48f13;
+        }
+    </style>
+</head>
+
+<body>
+
+    <form id="RegustrasiForm">
+        <p>REGISTRASI</p>
+        <label for="Nama">Nama:</label>
+        <input type="text" id="Nama" required>
+
+        <label for="Alamat">Alamat:</label>
+        <input type="Alamat" id="Alamat" required>
+
+        <label for="No Telp">No Telp:</label>
+        <input type="No Telp" id="No Telp" required>
+
+        <label for="Email">Email:</label>
+        <input type="Email" id="Email" required>
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" required>
+
+        <button type="button" onclick="login()">Login</button>
+    </form>
+
+    <script>
+        function login() {
+            const username = document.getElementById("username").value;
+            const Alamat = document.getElementById("Alamat").value;
+            const No Telp = document.getElementById("No Telp").value;
+            const Email = document.getElementById("Email").value;
+            const password = document.getElementById("password").value;
+
+            // Gantilah logika ini dengan sistem autentikasi yang lebih aman di produksi
+            if (username === "admin" && password === "admin123") {
+                // Jika login berhasil, arahkan ke halaman kelola menu dan pemesanan
+                window.location.href = "Kelola Menu.html";
+            } else {
+                alert("Login gagal. Periksa kembali datanya.");
+            }
+        }
+    </script>
+</body>
+
+</html>
